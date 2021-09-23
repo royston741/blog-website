@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.911);
+            color: white;
+            letter-spacing: 1;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 36px;
+            width: 100%;
+
+        }
+
+        ::selection {
+            background-color: rgba(214, 144, 214, 0.788);
+        }
+
+        .menu {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fafafa;
+            border-top: 1px solid rgba(0, 0, 0, 0.048);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.048);
+            padding: 10px;
+        }
+
+        .menu ul {
+            display: flex;
+            letter-spacing: 1;
+            /* padding: 5px; */
+        }
+
+        .menu ul li {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .menu ul li:hover,
+        .all-active {
+            background-color: rgba(128, 128, 128, 0.11);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            width: 80%;
+        }
+
+        .box-container {
+            background-color: rgba(182, 167, 167, 0.11);
+            width: 320px;
+            margin: 20px;
+            /* border:1px solid rgba(0, 0, 0, 0.295); */
+            padding: 10px;
+        }
+
+        .box .box-img {
+            height: 200px;
+            width: 300px;
+        }
+
+        .box .box-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .app .category {
+            position: relative;
+            bottom: 200px;
+            left: 15px;
+            background-color: blueviolet;
+            padding: 2px 7px 2px 7px;
+        }
+
+        .new .category {
+            position: relative;
+            bottom: 200px;
+            left: 15px;
+            background-color: yellow;
+            padding: 2px 7px 2px 7px;
+        }
+
+
+        .web .category {
+            position: relative;
+            bottom: 200px;
+            left: 15px;
+            background-color: pink;
+            padding: 2px 7px 2px 7px;
+        }
+
+        .box-description {
+
+            margin-top: 8px;
+            font-size: 0.8rem;
+        }
+
+        .box-text {
+
+            margin-top: 8px;
+        }
+
+        .text {
+            padding: 4px;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.11);
+        }
+
+        .time {
+            color: red;
+            margin-left: 5px;
+
+        }
+
+        .person {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* background-color: red; */
+        }
+
+        .person-img {
+            margin-right: 15px;
+            height: 44px;
+            width: 44px;
+            border-radius: 50%;
+        }
+
+
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.082);
+        }
+
+        .social_media {
+            color: blue;
+        }
+
+        .social_media i {
+            margin: 5px;
+        }
+
+        .social_media i:hover {
+            color: violet;
+            font-size: 2rem;
+        }
+
+
+        @media screen and (max-width:1350px) {
+
+            .container {
+                width: 100%;
+            }
+        }
+
+
+        @media screen and (max-width:1080px) {
+
+            .container {
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-width:1080px) {
+
+            .container {
+                width: 78%;
+            }
+        }
+
+        @media screen and (max-width:923px) {
+
+            .container {
+                width: 90%;
+            }
+        }
+
+
+        @media screen and (max-width:800px) {
+
+            .container {
+                width: 100%;
+            }
+        }
+
+
+        @media screen and (max-width:720px) {
+
+            .container {
+                width: 100%;
+            }
+
+            .box-container {
+                width: 250px;
+
+            }
+
+            .box-container .box-img {
+                width: 220px;
+            }
+        }
+
+        @media screen and (max-width:923px) {
+
+            .box-container {
+                margin: 20px 15px 20px 15px;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+
+
+        @media screen and (max-width:560px) {
+
+            .container {
+                width: 80%;
+            }
+        }
+
+
+        @media screen and (max-width:336px) {
+
+
+            .container {
+                width: 90%;
+            }
+        }
+
+        #check {
+            display: none;
+        }
+
+        #menu_icon {
+            display: none;
+        }
+
+        #cancel_icon {
+            display: none;
+        }
+
+
+      
+    </style>
+</head>
+
+<body>
+    <section class="head">
+        <a href=""></a>
+        <i class="fa fa-rss" aria-hidden="true"></i>blog
+        </a>
+    </section>
+
+  
+
+    <section class="menu">
+        <ul>
+            <li class="list all-active" data-filter="all">All</li>
+            <li class='list' data-filter="app">App design</li>
+            <li class='list' data-filter="web">Web design</li>
+            <li class="list" data-filter="new">new</li>
+        </ul>
+    </section>
+
+    <div class="container">
+
+        <div class="box-container new">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/1.jpg" alt="">
+                    <span class="category">Software</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+
+
+
+        <div class="box-container web">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/2.jpg" alt="">
+                    <span class="category">Web</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+
+
+        <div class="box-container app">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/4.jpg" alt="">
+                    <span class="category">App</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+
+        <div class="box-container new">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/7.jpg" alt="">
+                    <span class="category">Software</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+
+        <div class="box-container new">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/9.jpg" alt="">
+                    <span class="category">Software</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+
+        <div class="box-container app">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/10.jpg" alt="">
+                    <span class="category">App</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+
+        <div class="box-container web">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/3.jpg" alt="">
+                    <span class="category">Web</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+
+        <div class="box-container app">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/5.png" alt="">
+                    <span class="category">App</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+
+        <div class="box-container web">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/8.jpg" alt="">
+                    <span class="category">Web</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+
+        <div class="box-container new">
+            <div class="box">
+                <div class="box-img">
+                    <img src="/image/6.jpg" alt="">
+                    <span class="category">Software</span>
+                </div>
+            </div>
+
+
+            <div class="box-text">
+                <strong>How to create a App</strong>
+            </div>
+
+
+            <div class="box-description">
+                <span class="text">App design</span>
+                <span class="time">12-10-22</span>
+            </div>
+
+            <span class="person">
+                <img class='person-img' src="/image/person.jpg" alt="">
+                <span class="person-name">Shrutik</span>
+            </span>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="copyright">@Copyright 2021</div>
+        <div class="social_media">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </div>
+    </footer>
+
+</body>
+
+<script type='text/javascript' src="js/jquery.js "></script>
+
+<script type="text/javascript">
+    $(document).on('click', '.menu li', function () {
+        $(this).addClass('all-active').siblings().removeClass('all-active')
+    });
+
+    $(document).ready(function () {
+        $('.list').click(function () {
+            const value = $(this).attr('data-filter');
+            if (value == 'all') {
+                $('.box-container').show('1000');
+            }
+            else {
+                $('.box-container').not('.' + value).hide('1000');
+                $('.box-container').filter('.' + value).show('1000');
+            }
+        });
+    })
+</script>
+
+</html>
